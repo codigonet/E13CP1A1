@@ -17,7 +17,7 @@ class SalesController < ApplicationController
     if @sale.save
       redirect_to sales_done_path
     else
-      redirect_to new_sales_path
+      render :new
     end
   end
 
