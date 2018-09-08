@@ -6,7 +6,7 @@
   <div id="error_explanation">
     <h2>
       <%= pluralize(@sale.errors.count, "error") %>
-       al crear Venta:
+      al crear Venta:
     </h2>
 
     <ul>
@@ -53,11 +53,14 @@
   </div>
 
   <div class="form-group">
-    <fieldset>
-      <%= form.label :tax, class: "control-label" %>
-      <%= form.check_box :tax, class: "form-control" %>
-      Exento de IVA
-    </fieldset>
+    <div class="control">
+      <fieldset>
+        <label class="checkbox">
+          <%= form.check_box :tax, class: "checkbox" %>
+          Exento de IVA
+        </label>
+      </fieldset>      
+    </div>
   </div>
 
   <div class="form-group">

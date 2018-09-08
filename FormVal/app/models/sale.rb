@@ -10,4 +10,9 @@ class Sale < ApplicationRecord
     in: %w(uno dos tres cuatro cinco),
     message: "%{value} no es una categoría válida"
   }
+
+  def to_s
+    self.cod.to_s
+  end
+
 end

@@ -4,6 +4,7 @@ class SalesController < ApplicationController
   end
 
   def done
+    @sale = Sale.find(params[:id])
   end
 
   def create
@@ -15,7 +16,7 @@ class SalesController < ApplicationController
 
     # Guardar registro
     if @sale.save
-      redirect_to sales_done_path
+      redirect_to sales_done_path(@sale)
     else
       render :new
     end
